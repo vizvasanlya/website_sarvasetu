@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SarvaSetu - Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #4f46e5;
+      --accent: #06b6d4;
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: float 8s ease-in-out infinite;
+    }
+    .orb-1 { width: 400px; height: 400px; background: var(--primary); top: -10%; left: -5%; animation-delay: 0s; }
+    .orb-2 { width: 300px; height: 300px; background: var(--accent); bottom: -10%; right: -5%; animation-delay: 3s; }
+    .orb-3 { width: 250px; height: 250px; background: #8b5cf6; top: 50%; left: 60%; animation-delay: 5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: rgba(79, 70, 229, 0.15);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.6s ease-out 0.1s both;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 0.6s ease-out 0.2s both;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.8rem;
+      background: rgba(79, 70, 229, 0.12);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      animation: fadeInUp 0.6s ease-out 0.3s both;
+    }
+
+    .contact-email:hover {
+      background: rgba(79, 70, 229, 0.2);
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .contact-email svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+      animation: fadeInUp 0.6s ease-out 0.4s both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="container">
+    <div class="badge">Launching Soon</div>
+
+    <h1>We're Building<br>Something <span>Special</span></h1>
+
+    <p class="tagline">
+      SarvaSetu is on its way — designed to make a real difference.
+      We're putting the finishing touches in place and can't wait to share it with you.
+    </p>
+
+    <a href="mailto:support@sarvasetu.com" class="contact-email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 7l-10 7L2 7" /></svg>
+      support@sarvasetu.com
+    </a>
+
+    <p class="footer-note">Have a question or idea? We'd love to hear from you.</p>
+  </div>
+</body>
+</html>
